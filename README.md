@@ -1,4 +1,24 @@
+# IgNews
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Tools:
+- [Stripe]() - payments
+- [Github]() - authentication + OAuth
+- [faunaDB]() - database
+- [Prismic CMS]()- CMS
+
+ ## Serverless
+Serverless is a `cloud-native` development model that allows developers to build and run applications without having to manage servers.
+
+There are still servers in serverless, but they are abstracted away from app development. A cloud provider handles the routine work of provisioning, maintaining, and scaling the server infrastructure. Developers can simply package their code in containers for deployment.
+
+Each route of the application and all your code run entirely isolated within your sandbox and will not affect other resources.
+
+## NextJS
+The React Framework for the Web
+
+### SSR
+> `Server-side rendering`, the page HTML is generated on each request. **NodeJS** renders the page before the response get to the client 
 
 ## Getting Started
 
