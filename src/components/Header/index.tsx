@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logoImg from "public/images/logo.svg";
+import { SignInButton } from "../SignInButton";
 import style from "./styles.module.scss";
 
 export function Header() {
@@ -11,6 +12,7 @@ export function Header() {
           <a className={style['active']}>Home</a>
           <a>Posts</a>
         </nav>
+        <SignInButton />
       </div>
     </header>
   )
