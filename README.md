@@ -21,6 +21,11 @@ The React Framework for the Web
 ### SSR
 > `Server-side rendering`, the page HTML is generated on each request. **NodeJS** renders the page before the response get to the client 
 
+## Stripe 
+```console
+npm install stripe
+```
+
 ## Getting Started
 
 First, run the development server:
