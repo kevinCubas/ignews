@@ -21,6 +21,10 @@ The React Framework for the Web
 ### SSR
 > `Server-side rendering`, the page HTML is generated on each request. **NodeJS** renders the page before the response get to the client 
 
+### SSG
+
+> `Static site generation`, the HTML is generated during build time. You can reuse (and reload) the whole page on each request.
+
 ## Stripe 
 ```console
 npm install stripe

@@ -5,7 +5,7 @@ import style from "../styles/home.module.scss";
 
 import girlCoding from "public/images/avatar.svg";
 import { SubscribeButton } from "@/components/SubscribeButton";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { stripe } from "./lib/stripe";
 
 interface IHomeProps {
@@ -31,7 +31,7 @@ export default function Home({ product }: IHomeProps) {
             Get access to all the publications <br />
             <span>for {product.amount} month</span>
           </p>
-          <SubscribeButton />
+          <SubscribeButton priceId={product.priceId} />
         </section>
         <Image src={girlCoding} alt="Girl coding"/>
       </main>
@@ -39,10 +39,8 @@ export default function Home({ product }: IHomeProps) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const price = await stripe.prices.retrieve('price_1MfUQPCnZ0yaKoz45U10OjIl', {
-    expand: ['product']
-  });
+export const getStaticProps: GetStaticProps = async () => {
+  const price = await stripe.prices.retrieve('price_1MfUQPCnZ0yaKoz45U10OjIl');
   
 
   const product = {
@@ -57,6 +55,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
       product
-    }
+    }, 
+    revalidate: 60 * 60 * 24 // 24 hours
   }
 }
