@@ -2,12 +2,13 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Tools:
-- [Sass]() - styles with SCSS
-- [Stripe]() - payments
-- [Github]() - authentication + OAuth
-- [faunaDB]() - database
-- [Prismic CMS]()- CMS
-- [react-icons]() - Icons
+- [Sass](https://sass-lang.com/) - styles with SCSS
+- [Stripe](https://stripe.com/br) - payments
+- [Github](https://github.com/) - authentication + OAuth
+- [NextAuth](https://authjs.dev/) - Authentication NextJS
+- [faunaDB](https://fauna.com/) - database
+- [Prismic CMS](https://prismic.io/)- CMS
+- [react-icons](https://react-icons.github.io/react-icons/) - Icons
  ## Serverless
 Serverless is a `cloud-native` development model that allows developers to build and run applications without having to manage servers.
 
