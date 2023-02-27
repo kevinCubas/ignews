@@ -31,6 +31,72 @@ The React Framework for the Web
 npm install stripe
 ```
 
+## FaunaDB 
+```console
+npm install faunadb
+```
+
+Sign in to FaunaDB and create a collection - `Region group`: **Classic (C)** <br />
+Then create a index named `user_by_email` - Terms section === data.email. Select the unique option. <br />
+
+Create a environment variable - **FAUNADB_KEY**
+
+```javascript
+import { Client as FaunaClient} from "faunadb";
+
+const fauna = new FaunaClient({
+  secret: process.env.FAUNADB_KEY!,
+});
+```
+### FQL
+> The Fauna Query Language (FQL) is the native API for querying Fauna.
+
+Example: 
+
+```javascript
+
+import { Client as FaunaClient, query as q } from "faunadb";
+...
+
+export default NextAuth({
+  providers: [],
+  callbacks: {
+    // Create and save a new user into the Database if do not exist yet
+    // Otherwise get the user info
+    async signIn({ user, account, profile }) {
+      const { email } = user;
+      try {
+        await fauna.query(
+          q.If(
+            q.Not(
+              q.Exists(
+                q.Match(
+                  q.Index('user_by_email'),
+                  q.Casefold(email!)
+                )
+              )
+            ),
+            q.Create(
+              q.Collection('users'),
+              { data: { email } }
+            ),
+            q.Get(
+              q.Match(
+                q.Index('user_by_email'),
+                q.Casefold(email!)
+              )
+            )
+          )
+        )
+        return true
+      } catch {
+        return false
+      }
+    },
+  }
+})
+```
+
 ## Getting Started
 
 First, run the development server:
