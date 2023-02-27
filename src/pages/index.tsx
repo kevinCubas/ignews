@@ -33,7 +33,7 @@ export default function Home({ product }: IHomeProps) {
           </p>
           <SubscribeButton priceId={product.priceId} />
         </section>
-        <Image src={girlCoding} alt="Girl coding"/>
+        <Image src={girlCoding} alt="Girl coding" priority/>
       </main>
     </>
   )
