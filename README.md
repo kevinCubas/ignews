@@ -7,6 +7,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [Github](https://github.com/) - authentication + OAuth
 - [NextAuth](https://authjs.dev/) - Authentication NextJS
 - [faunaDB](https://fauna.com/) - database
+- [Axios](https://axios-http.com/ptbr/docs/intro) -  promise-based HTTP Client
 - [Prismic CMS](https://prismic.io/)- CMS
 - [react-icons](https://react-icons.github.io/react-icons/) - Icons
  ## Serverless
