@@ -6,7 +6,7 @@ import style from "../styles/home.module.scss";
 import girlCoding from "public/images/avatar.svg";
 import { SubscribeButton } from "@/components/SubscribeButton";
 import { GetStaticProps } from "next";
-import { stripe } from "./lib/stripe";
+import { stripe } from "./services/stripe";
 
 interface IHomeProps {
   product: {
