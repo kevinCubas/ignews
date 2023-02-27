@@ -10,6 +10,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [Axios](https://axios-http.com/ptbr/docs/intro) -  promise-based HTTP Client
 - [Prismic CMS](https://prismic.io/)- CMS
 - [react-icons](https://react-icons.github.io/react-icons/) - Icons
+
  ## Serverless
 Serverless is a `cloud-native` development model that allows developers to build and run applications without having to manage servers.
 
@@ -31,6 +32,10 @@ The React Framework for the Web
 ```console
 npm install stripe
 ```
+
+## Webhooks
+
+`Webhook` (also called a **web callback** or **HTTP push API**) is a one-way communication from a source application to a destination application, and send notifications in near real time. Sending or receiving data is triggered when a certain event happens in one of the applications - unlike typical APIs where you would need to poll for data very frequently to get it in real time.
 
 ## FaunaDB 
 ```console
