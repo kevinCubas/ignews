@@ -103,6 +103,16 @@ export default NextAuth({
 })
 ```
 
+## JAMStack
+
+> Jamstack is a term that describes a modern web development architecture based on `JavaScript`, `APIs`, and `Markup` (JAM). Jamstack isn't a specific technology or framework but a different architecture for building apps and websites.
+
+### CMS
+> A content management system (CMS) is an application that allowi multiple contributors to create, edit and publish. Content in a CMS is typically stored in a database and displayed in a presentation layer based on a set of templates like a website. The frontend and backend are coupled together.
+
+### Headless CMS
+> A headless CMS is a content management system where the **frontend** and **backend** are separated from each other. With headless CMSs, the stored content is made available to developers through **APIs**.Headless CMSs are frontend agnostic and API-driven by design
+
 ## Getting Started
 
 First, run the development server:
