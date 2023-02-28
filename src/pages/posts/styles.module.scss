@@ -29,6 +29,8 @@
       font-size: 1.5rem;
       margin-top: 1rem;
       line-height: 2rem;
+      
+      transition: color 0.2s;
     }
 
     p {
@@ -37,8 +39,7 @@
       line-height: 1.625rem;
     }
 
-    transition: color 0.2s;
-    
+
     &:hover strong {
       color: var(--yellow-500);
     }
