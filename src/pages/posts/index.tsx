@@ -4,6 +4,7 @@ import { getPrismicClient } from "../services/prismic";
 import * as prismicH from '@prismicio/helpers';
 
 import styles from "./styles.module.scss";
+import Link from "next/link";
 
 type PostType = {
   slug: string;
@@ -27,11 +28,11 @@ export default function Posts({ posts }: IPostsProps) {
           {
             posts.map(post => {
               return (
-                <a href="" key={post.slug}>
+                <Link href={`posts/${post.slug}`} key={post.slug}>
                   <time>{post.updatedAt}</time>
                   <strong>{post.title}</strong>
                   <p>{post.excerpt}</p>
-                </a>
+                </Link>
               )
             })
           }
